@@ -1,0 +1,39 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-image: url("https://st.depositphotos.com/1025674/1715/v/950/depositphotos_17155901-stock-illustration-time-background.jpg");
+}
+
+body .container{
+    background-color:lavender;
+    border-radius: 12px;
+    padding-bottom: 4px;
+    opacity: 90%;
+
+}
+
+body .container .btn{
+    background-color: darkslateblue;
+    border:none;
+}
+body .container .btn:hover{
+    background-color:gainsboro;
+    color: black;
+    transition: all 0.4sec ease;
+}
+
+/* Footer Me CSS*/
+
+footer {
+    position: fixed;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 40px;
+    background: grey;
+}
+
+

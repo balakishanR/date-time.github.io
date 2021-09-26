@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Time & Date</title>
+
+    <script>
+        let a;
+        let time;
+        let dated;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date();
+            time = a.toLocaleTimeString()
+            dated = a.toLocaleDateString(undefined, options)
+            document.getElementById('time').innerHTML = time
+            document.getElementById('myDate').innerHTML = dated + " in India";
+            document.getElementById('london').innerHTML = "London" + " : " + a.toLocaleTimeString("en-US",{timeZone : 'Europe/London', timeStyle : 'medium'});
+            document.getElementById('new_york').innerHTML = "New York" + " : " + a.toLocaleTimeString("en-US",{timeZone : 'America/New_york', timeStyle : 'medium'});
+            document.getElementById('sydney').innerHTML = "Sydney" + " : " + a.toLocaleTimeString("en-US",{timeZone : 'Australia/Sydney', timeStyle : 'medium'});
+        }, 1000);
+
+    </script>
+
+  </head>
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/"><img src="/img2.png" width="40px" alt="brand-img"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/balakishanrenjarla/">Linkedin</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      </header>
+
+      <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Current Time : <span id="time"></span></h1>
+            <h2 class="" style="font-size: x-large; color: rgb(84, 189, 224);" id="myDate"></h2>
+            <p class="lead">Welcome to your time!</p>
+            <a class="nav-link dropdown-toggle" style= "color: gray;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Browse More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" id="london" href="#">London</a></li>
+              <li><a class="dropdown-item" id="new_york" href="#">New_york</a></li>
+              <li><a class="dropdown-item" id="sydney" href="#">Sydney</a></li>
+            </ul>
+          </div>
+      </div>
+
+      <footer>
+        <div class="text">
+            <span>Created By <a href="https://www.linkedin.com/in/balakishanrenjarla/" style="color: gainsboro;" >BalakishanRenjarla</a> | &#169; 2021 All Rights Reserved.</span>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
